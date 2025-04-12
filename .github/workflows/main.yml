@@ -11,11 +11,11 @@ jobs:
     # Разворачиваем окружение:
     runs-on: ubuntu-latest
     services:
-      postrges:
+      postgres:
         image: postgres:13.10
         env:
           POSTGRES_USER: djanjo_user
-          POSRGRES_PASSWORD: django_password
+          POSTGRES_PASSWORD: django_password
           POSTGRES_DB: django_db
         ports:
           - 5432:5432
