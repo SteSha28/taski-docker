@@ -45,7 +45,7 @@ jobs:
           POSTGRES_USER: djanjo_user
           POSTGRES_PASSWORD: django_password
           POSTGRES_DB: django_db
-          POSTGRES_HOST: localhost
+          DB_HOST: localhost
       run: |
         python -m ruff check backend/
         cd backend/
