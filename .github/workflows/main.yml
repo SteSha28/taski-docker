@@ -41,6 +41,11 @@ jobs:
     - name: Lint with ruff and run django tests
       # Вызываем ruff и указываем ему,
       # что нужно проверить файлы только в папке backend/
+      env:
+          POSTGRES_USER: djanjo_user
+          POSTGRES_PASSWORD: django_password
+          POSTGRES_DB: django_db
+          POSTGRES_HOST: localhost
       run: |
         python -m ruff check backend/
         cd backend/
